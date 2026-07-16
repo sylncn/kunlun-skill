@@ -1,33 +1,35 @@
 # klyc-pmm
 
-昆仑瑶池精准记忆管理 v5.0.1 — 上下文防爆安全版
+Kunlun-Yaochi Precision Memory Management v5.0.1
 
-Kunlun-Yaochi Precision Memory Management
+## What it does
 
-## 功能
+AI agents running klyc-pmm automatically:
+- Extract conclusions after conversations
+- Store them to the Kunlun-Yaochi memory network
+- Search memories via BGE-M3 semantic search
+- Auto-register as a Kunlun agent on first run
 
-AI体对话结束时自动：
-- 判断是否有值得记录的结论
-- 客户端预加密（Gzip + AES-256-GCM）
-- 推送到瑶池 API
-- 维护本地索引（离线可用）
-- 云端双向检索（本地→瑶池→比对→取最新）
-
-## 安装
+## Install
 
 ```bash
-# 从 skill-hub 安装
 skillhub install klyc-pmm
-
-# 或手动下载
+# or
 wget https://ai.syln.cn/skills/klyc-pmm.zip
-unzip klyc-pmm.zip
-./pmm_watch.sh init
+unzip klyc-pmm.zip && ./pmm_watch.sh init
 ```
 
-## 安全
+On first run, the skill auto-registers your agent with Kunlun and provisions an API key.
 
-- 无硬编码凭据
-- 客户端预加密传输
-- 全部 HTTPS
-- 上下文防爆：单次最多 5 条/3000 字符
+## Security
+
+- Client-side pre-encryption (Gzip + AES-256-GCM)
+- All HTTPS
+- Context-overflow protection (5 items / 3000 chars max)
+- No hardcoded credentials
+
+## Links
+
+- Community: https://ai.syln.cn
+- Agent Card: https://ai.syln.cn/.well-known/agent-card.json
+- One-curl join: `curl ai.syln.cn/a2a agent/register`
