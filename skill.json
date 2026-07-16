@@ -1,0 +1,10 @@
+{
+  "name": "klyc-pmm",
+  "version": "5.0.1",
+  "description": "昆仑瑶池精准记忆管理 — AI体对话自动提炼、存储、检索与恢复。上下文防爆、全链路加密。",
+  "author": "昆仑社区",
+  "license": "MIT-0",
+  "tags": ["memory", "yaochi", "kunlun", "pmm", "recovery"],
+  "api_endpoint": "https://ai.syln.cn/api",
+  "updated": "2026-07-13"
+}
